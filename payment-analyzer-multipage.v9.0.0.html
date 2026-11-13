@@ -3244,7 +3244,7 @@ body {
                                 </svg>
                             </div>
                         </div>
-                        <div class="kpi-value" id="kpiExpected">£0.00</div>
+                        <div class="kpi-value" id="reportKpiExpected">£0.00</div>
                         <div class="kpi-subtitle" id="kpiExpectedSub">Total earnings</div>
                     </div>
                     
@@ -4653,7 +4653,7 @@ exports.renderReport = function(data) {
     document.getElementById('reportStatus').textContent = totals.differenceTotal >= 0 ? 'Balanced' : 'Discrepancy';
     
     // Update KPIs
-    document.getElementById('kpiExpected').textContent = `£${totals.expectedTotal.toFixed(2)}`;
+    document.getElementById('reportKpiExpected').textContent = `£${totals.expectedTotal.toFixed(2)}`;
     document.getElementById('kpiPaid').textContent = `£${totals.paidTotal.toFixed(2)}`;
     document.getElementById('kpiDifference').textContent = `£${Math.abs(totals.differenceTotal).toFixed(2)}`;
     document.getElementById('kpiConsignments').textContent = totals.totalConsignments || '0';
